@@ -38,6 +38,13 @@
           extend: {
             colors: {
               clifford: "#da373d",
+              'btn-primary': '#B68C5A',
+            },
+            fontSize: {
+              'btn-font': '18px',
+            },
+            backgroundImage: {
+              "banner-bg": "linear-gradient(to right, rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.3)), url('./images/banner.png')",
             },
           },
         },
@@ -45,13 +52,87 @@
     </script>
 
   </head>
-  <body>
+  <body class="max-w-[1170px] mx-auto">
     <!-- Header section -->
-    <header>
+    <header class="border border-orange-500">
       <!-- Nav section -->
-      <nav>
-        
+      <nav class="container mx-auto my-12">
+        <div class="navbar bg-base-100">
+          <!-- Navbar Start Section -->
+          <div class="navbar-start">
+            <!-- Dropdown for Mobile Navigation -->
+            <div class="dropdown">
+              <!-- Hamburger Menu Button: Visible on Small Screens (lg:hidden) -->
+              <div tabindex="0" role="button" aria-label="Open Navigation Menu" class="btn btn-ghost lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                </svg>
+              </div>
+              <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                <li><a>Home</a></li>
+                <li><a>Services</a></li>
+                <li><a>Cases</a></li>
+                <li><a>Blogs</a></li>
+                <li><a>Contact Us</a></li>
+              </ul>
+            </div>
+            <a href="#" class="text-xl font-eb-garamond btn btn-ghost pl-0">
+              <img src="images/logo2.png" alt="Company Logo">
+            </a>        
+          </div>
+
+          <!-- Navbar Center Section -->
+          <div class="navbar-center hidden lg:flex text-slate-500 text-base font-poppins">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Home</a></li>
+              <li><details><summary>Services</summary></details></li>
+              <li><details><summary>Cases</summary></details></li>
+              <li><details><summary>Blog</summary></details></li>
+              <li><details><summary>Contact Us</summary></details></li>
+            </ul>
+          </div>
+
+          <!-- Navbar End Section -->
+          <div class="navbar-end">
+            <button class="bg-btn-primary text-white text-base font-poppins px-7 py-4 rounded-md hover:bg-opacity-80 focus:ring-2 focus:ring-btn-primary">
+              Free Consultation
+            </button>
+          </div>
+        </div>
       </nav>
+
+      <!-- Hero Section -->
+      <div class="hero bg-banner-bg py-24">
+        <!-- Hero Content -->
+        <div class="hero-content text-center text-white">
+          <div>
+            <!-- Hero Title -->
+            <h1 class="text-7xl font-bold font-eb-garamond mb-5 leading-tight">
+              We Provide Effective <br> Legal Solutions
+            </h1>
+
+            <!-- Hero Description -->
+            <p class="mb-7 font-poppins">
+              There are many variations of passages of Lorem Ipsum available, 
+              but the <br> majority have suffered alteration in some form, by injected humour.
+            </p>
+
+            <!-- Search Bar -->
+            <div class="flex items-center gap-4">
+              <input
+                type="text"
+                placeholder="Search your services"
+                class="input input-bordered flex-1 h-14 px-5 font-poppins"
+              />
+              <button class="bg-btn-primary text-white font-poppins px-8 h-14 rounded-md hover:bg-opacity-80 focus:ring-2 focus:ring-btn-primary">
+                Search
+              </button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
     </header>
 
     <!-- Main section -->
